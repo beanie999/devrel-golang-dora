@@ -26,7 +26,7 @@ jobs:
           uri: 'https://github.com/newrelic/nri-flex/releases/download/v1.7.0/nri-flex_linux_1.7.0_amd64.tar.gz'
           name: 'Send data to NR'
           version: '1.7.0'
-          command: ./nri-flex -config_path /home/runner/work/devrel-golang-dora/devrel-golang-dora/gh-flex.yml -insights_url https://insights-collector.newrelic.com/v1/accounts/${{secrets.ACCOUNT_ID}}/events -insights_api_key ${{secrets.INSIGHTS_API_KEY}}
+          command: ./nri-flex -config_path /home/runner/work/devrel-golang-dora/devrel-golang-dora/gh-flex.yml -insights_url https://insights-collector.eu01.nr-data.net/v1/accounts/${{secrets.ACCOUNT_ID}}/events -insights_api_key ${{secrets.INSIGHTS_API_KEY}}
   newrelic:
     runs-on: ubuntu-latest
     name: New Relic
